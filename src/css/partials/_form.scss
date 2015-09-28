@@ -1,0 +1,14 @@
+.form--element {
+  margin-top:10px;
+
+  input[type='text'] {
+    width:98%;
+    @extend %form-element;
+    border-radius:0;
+  }
+  input[type='submit'] {
+    margin-top:5px;
+    @extend %button;
+    border-radius:0;
+  }
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Search User</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="dist/css/screen.css">
+    
+    <script src="dist/js/modernizr.js" charset="utf-8"></script>
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <form id="searchUserForm">
+
+
+        <div class="form--element">
+          <label for="firstname">First name</label>
+          <input type="text" class="first_name" name="first_name" autocomplete="false">
+        </div>
+
+        <div class="form--element">
+          <label for="lastname">Last name</label>
+          <input type="text" class="last_name" name="last_name" autocomplete="false">
+        </div>
+
+        <div class="form--element">
+          <label for="email">Email address</label>
+          <input type="text" class="email" name="email" autocomplete="false">
+        </div>
+
+        <div class="form--element">
+          <input type="submit" value="Search user">
+        </div>
+
+      </form>
+
+      <div class="results">
+        <ul></ul>
+      </div>
+
+
+
+    </div>
+
+
+    <script src="dist/js/app.js" charset="utf-8"></script>
+
+  </body>
+
+</html>

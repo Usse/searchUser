@@ -1,0 +1,26 @@
+%img-responsive {
+  display: block;
+  width:100%;
+  max-width: 100%;
+}
+
+%button {
+  border:0;
+  outline:none;
+  padding:5px 10px;
+  background: $button-color;
+  transition:background 200ms;
+  &:hover {
+    background: $button-hover-color;
+  }
+}
+
+%form-element {
+  outline:none;
+  border:1px solid $border-color;
+  padding: 5px 1%;
+  transition:border 200ms;
+  &:focus {
+    border:1px solid $border-active-color;
+  }
+}
