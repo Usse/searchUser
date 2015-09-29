@@ -1,6 +1,5 @@
 import _ from 'underscore';
 
-
 var search = {
 
   active_filters : [
@@ -16,19 +15,12 @@ var search = {
   },
 
   bindEvents : () => {
-
-    // $('form input').on('keyup', () => {
-    //   search.doCall();
-    // });
-
     $('form').on('submit', (e) => {
       e.preventDefault();
       search.doCall();
     });
 
-
     $('body').on('click', 'li', function(e) {
-      // search.showDetails(element);
       $(this).find('.user--info').stop(true,false).slideToggle(200);
     });
 
@@ -36,7 +28,7 @@ var search = {
 
   doCall : () => {
     $.getJSON(
-      'users.json', //MOVE!
+      'users.json',
       (data) => {
         search.results = data;
         search.filterResults()
@@ -51,10 +43,7 @@ var search = {
         return item[filter].indexOf($('.' + filter).val().toLowerCase()) > -1
       });
     })
-
-
     search.renderUsers(results)
-
   },
 
   renderUsers: (users) => {
@@ -74,12 +63,7 @@ var search = {
       </li>`
     });
     $('.results ul').empty().append(mrk);
-
   }
-
 };
-
-
-
 
 export { search }

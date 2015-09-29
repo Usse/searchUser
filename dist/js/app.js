@@ -1581,25 +1581,18 @@ var search = {
   },
 
   bindEvents: function bindEvents() {
-
-    // $('form input').on('keyup', () => {
-    //   search.doCall();
-    // });
-
     $('form').on('submit', function (e) {
       e.preventDefault();
       search.doCall();
     });
 
     $('body').on('click', 'li', function (e) {
-      // search.showDetails(element);
       $(this).find('.user--info').stop(true, false).slideToggle(200);
     });
   },
 
   doCall: function doCall() {
-    $.getJSON('users.json', //MOVE!
-    function (data) {
+    $.getJSON('users.json', function (data) {
       search.results = data;
       search.filterResults();
     });
@@ -1612,7 +1605,6 @@ var search = {
         return item[filter].indexOf($('.' + filter).val().toLowerCase()) > -1;
       });
     });
-
     search.renderUsers(results);
   },
 
@@ -1623,7 +1615,6 @@ var search = {
     });
     $('.results ul').empty().append(mrk);
   }
-
 };
 
 exports.search = search;
